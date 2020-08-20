@@ -1,0 +1,38 @@
+{
+  "name": "israel-bank-scrapers-api",
+  "version": "1.0.0",
+  "description": "This is api for package israeli-bank-scrapers",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "israeli-bank-scrapers": "^0.8.1",
+    "moment": "^2.27.0",
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0",
+    "static-favicon": "^2.0.0-alpha"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "app-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hybridplus/IsraeliBankApi.git"
+  },
+  "keywords": [
+    "Bank",
+    "Israeli",
+    "API",
+    "Leumi",
+    "Max"
+  ],
+  "author": "Andrii Balaban",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hybridplus/IsraeliBankApi/issues"
+  },
+  "homepage": "https://github.com/Hybridplus/IsraeliBankApi#readme"
+}
