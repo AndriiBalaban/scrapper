@@ -2,6 +2,7 @@ var moment = require('moment');
 const {createScraper} = require('israeli-bank-scrapers');
 
 module.exports.leumi = function (req, res) {
+    console.log('new leumi connection');
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "leumi", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
@@ -38,6 +39,7 @@ module.exports.leumi = function (req, res) {
 };
 
 module.exports.otsar = function (req, res) {
+    console.log('new otsar connection');
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'

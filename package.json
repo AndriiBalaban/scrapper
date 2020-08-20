@@ -6,7 +6,7 @@
   "dependencies": {
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
-    "israeli-bank-scrapers": "^0.8.1",
+    "israeli-bank-scrapers": "^0.9.1",
     "moment": "^2.27.0",
     "morgan": "^1.10.0",
     "serve-favicon": "^2.5.0",
