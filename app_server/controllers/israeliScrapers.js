@@ -3,6 +3,7 @@ const {createScraper} = require('israeli-bank-scrapers');
 
 module.exports.leumi = function (req, res) {
     console.log('new leumi connection');
+    console.log(req.query);
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "leumi", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
@@ -30,6 +31,9 @@ module.exports.leumi = function (req, res) {
                     console.log(`found ${account.txns.length} transactions for account number ${account.accountNumber}`);
                 });
             } else {
+                res.status(500).send({
+                    message : scraper.errorType
+                })
                 throw new Error(scrapeResult.errorType);
             }
         } catch (e) {
@@ -40,6 +44,7 @@ module.exports.leumi = function (req, res) {
 
 module.exports.otsar = function (req, res) {
     console.log('new otsar connection');
+    console.log(req.query);
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
@@ -67,6 +72,9 @@ module.exports.otsar = function (req, res) {
                     console.log(`found ${account.txns.length} transactions for account number ${account.accountNumber}`);
                 });
             } else {
+                res.status(500).send({
+                    message : scraper.errorType
+                })
                 throw new Error(scrapeResult.errorType);
             }
         } catch (e) {
@@ -77,6 +85,7 @@ module.exports.otsar = function (req, res) {
 
 module.exports.max = function (req, res) {
     console.log('new max connection');
+    console.log(req.query);
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
@@ -104,6 +113,9 @@ module.exports.max = function (req, res) {
                     console.log(`found ${account.txns.length} transactions for account number ${account.accountNumber}`);
                 });
             } else {
+                res.status(500).send({
+                    message : scraper.errorType
+                })
                 throw new Error(scrapeResult.errorType);
             }
         } catch (e) {
@@ -114,6 +126,7 @@ module.exports.max = function (req, res) {
 
 module.exports.cal = function (req, res) {
     console.log('new cal connection');
+    console.log(req.query);
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
@@ -141,6 +154,9 @@ module.exports.cal = function (req, res) {
                     console.log(`found ${account.txns.length} transactions for account number ${account.accountNumber}`);
                 });
             } else {
+                res.status(500).send({
+                    message : scraper.errorType
+                })
                 throw new Error(scrapeResult.errorType);
             }
         } catch (e) {
