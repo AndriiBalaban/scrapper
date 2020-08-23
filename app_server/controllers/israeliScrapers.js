@@ -6,7 +6,7 @@ module.exports.leumi = function (req, res) {
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "leumi", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
-        startDate: moment().startOf('month'), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
+        startDate: moment(req.query.lastUpdate), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
         combineInstallments: false, // if set to true, all installment transactions will be combine into the first one
         showBrowser: false, // shows the browser while scraping, good for debugging (default false)
         verbose: false//, // include more debug info about in the output
@@ -43,7 +43,7 @@ module.exports.otsar = function (req, res) {
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
-        startDate: moment().startOf('month'), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
+        startDate: moment(req.query.lastUpdate), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
         combineInstallments: false, // if set to true, all installment transactions will be combine into the first one
         showBrowser: false, // shows the browser while scraping, good for debugging (default false)
         verbose: false//, // include more debug info about in the output
@@ -80,7 +80,7 @@ module.exports.max = function (req, res) {
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
-        startDate: moment().startOf('month'), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
+        startDate: moment(req.query.lastUpdate), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
         combineInstallments: false, // if set to true, all installment transactions will be combine into the first one
         showBrowser: false, // shows the browser while scraping, good for debugging (default false)
         verbose: false//, // include more debug info about in the output
@@ -117,7 +117,7 @@ module.exports.cal = function (req, res) {
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
         companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
-        startDate: moment().startOf('month'), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
+        startDate: moment(req.query.lastUpdate), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
         combineInstallments: false, // if set to true, all installment transactions will be combine into the first one
         showBrowser: false, // shows the browser while scraping, good for debugging (default false)
         verbose: false//, // include more debug info about in the output
