@@ -88,7 +88,7 @@ module.exports.max = function (req, res) {
     console.log(req.body);
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
-        companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
+        companyId: "max", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
         startDate: moment(req.body.lastUpdate), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
         combineInstallments: false, // if set to true, all installment transactions will be combine into the first one
         showBrowser: false, // shows the browser while scraping, good for debugging (default false)
@@ -129,7 +129,7 @@ module.exports.cal = function (req, res) {
     console.log(req.body);
     process.env.args = ['--no-sandbox', '--disable-setuid-sandbox'];
     let options = {
-        companyId: "otsarHahayal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
+        companyId: "visaCal", // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
         startDate: moment(req.body.lastUpdate), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
         combineInstallments: false, // if set to true, all installment transactions will be combine into the first one
         showBrowser: false, // shows the browser while scraping, good for debugging (default false)
